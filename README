@@ -15,5 +15,5 @@ a file.  Default is 'log.out'.  But this can be changed with the static function
 
 Improvements
 ------------
-Twicking the macros would allow for logging to std::cerr rather than a file.
+Tweaking the macros would allow for logging to std::cerr rather than a file.
 A nice feature would be to allow several files for logging rather than one.
