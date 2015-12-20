@@ -8,12 +8,23 @@ The class is defined in a single header file and a single source file.
 
 Use
 ---
-Use with the following three macros INFO, WARN and ERROR.  If the macro __LOG__
-is defined before the header is included the logging output is written to
-a file.  Default is 'log.out'.  But this can be changed with the static function
-'log::file( const char* new_file_name )'.
+To log to a file use '#define __LOG_TO_FILE__' then include 'stone.hh'.
+To log to std::cerr use '#define __LOG_TO_CERR__ then include 'stone.hh.
+Default file is 'log.out' this can be changed using 'LOGFILE( filename );'
+Logging is then done with either INFO, WARN or ERROR:
+
+        INFO( "value of x in hex is " << std::hex << x << std::endl );
+        WARN( message << std::endl );
+        ERROR( "software bug" << __line__ << ":" << __file__ << std::endl );
+
+
+Limitations
+-----------
+Curently switching files can result loss of information if you
+change back to the original file by using 'LOGFILE( filename );'
+several times.
+
 
 Improvements
 ------------
-Tweaking the macros would allow for logging to std::cerr rather than a file.
 A nice feature would be to allow several files for logging rather than one.

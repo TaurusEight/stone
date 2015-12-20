@@ -1,4 +1,4 @@
-// Time-stamp: <2015-12-20 17:46:00 daniel>
+// Time-stamp: <2015-12-20 18:10:42 daniel>
 #ifndef __STONE_HH__
 #define __STONE_HH__
 
@@ -51,13 +51,18 @@ namespace stone {
 
 // Macros
 //-----------------------------------------------------------------------------
-#ifdef __LOG__
+#define LOGFILE( F )
+#ifdef __LOG_TO_FILE__
+#undef LOGFILE
 #define LOGFILE( F ) stone::log::file( F )
 #define INFO( M ) *stone::log::info() << M
 #define WARN( M ) *stone::log::warn() << M
 #define ERROR( M )  *stone::log::error() << M
-#else
-#define LOGFILE( F )
+#elif defined __LOG_TO_CERR__
+#define INFO( M ) std::cerr << "INFO: " << M
+#define WARN( M ) std::cerr << "WARN: " << M
+#define ERROR( M ) std::cerr << "ERROR: " << M
+#else  // neither defined
 #define INFO( M )
 #define WARN( M )
 #define ERROR( M )
