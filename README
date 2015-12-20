@@ -1,0 +1,14 @@
+
+A simple thread safe logging class.
+
+The class is defined in a single header file and a single source file.
+
+             'stone.hh' and 'stone.cc'
+
+
+Use with the following three macros INFO, WARN and ERROR.  If the macro __LOG__
+is defined before the header is included the logging output is written to
+a file.  Default is 'log.out'.  But this can be changed with the static function
+'log::file( const char* new_file_name )'.
+
+One limitation of this class is that logging can not be turned off project wide.
