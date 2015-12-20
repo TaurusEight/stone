@@ -1,7 +1,24 @@
-// Time-stamp: <2015-12-20 06:20:43 daniel>
+// Time-stamp: <2015-12-20 18:27:32 daniel>
+
+
+// Copyright (c) 2015 by Daniel Mendyke
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 
 //
-// stone.cc: Definitions for this logging class
+// stone.cc: Source definitions for this logging class
 //
 
 

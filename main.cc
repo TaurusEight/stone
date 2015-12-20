@@ -1,6 +1,6 @@
 
 
-#define __LOG_TO_CERR__
+#define __LOG_TO_FILE__
 
 #include <iostream>
 #include "stone.hh"  // stone::log
